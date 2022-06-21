@@ -24,6 +24,7 @@ def login_page(request):
             return redirect('weather')
         else:
             messages.info(request, "username or password is incorrect")
+            return redirect('register')
 
     return render(request, 'login.html')
 
